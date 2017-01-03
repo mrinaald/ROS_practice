@@ -1,0 +1,2 @@
+agitr
+-DCATKIN_DEVEL_PREFIX=/home/mrinaal/git/ROS_practice/devel -DCMAKE_INSTALL_PREFIX=/home/mrinaal/git/ROS_practice/install -G Unix Makefiles
