@@ -196,6 +196,21 @@ turtlesim_generate_messages_py/fast:
 .PHONY : turtlesim_generate_messages_py/fast
 
 # Convenience name for target.
+agitr/CMakeFiles/count.dir/rule:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/count.dir/rule
+.PHONY : agitr/CMakeFiles/count.dir/rule
+
+# Convenience name for target.
+count: agitr/CMakeFiles/count.dir/rule
+
+.PHONY : count
+
+# fast build rule for target.
+count/fast:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/count.dir/build.make agitr/CMakeFiles/count.dir/build
+.PHONY : count/fast
+
+# Convenience name for target.
 agitr/CMakeFiles/turtlesim_generate_messages_nodejs.dir/rule:
 	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/turtlesim_generate_messages_nodejs.dir/rule
 .PHONY : agitr/CMakeFiles/turtlesim_generate_messages_nodejs.dir/rule
@@ -660,6 +675,33 @@ turtlesim_generate_messages_eus/fast:
 	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/turtlesim_generate_messages_eus.dir/build.make agitr/CMakeFiles/turtlesim_generate_messages_eus.dir/build
 .PHONY : turtlesim_generate_messages_eus/fast
 
+src/count.o: src/count.cpp.o
+
+.PHONY : src/count.o
+
+# target to build an object file
+src/count.cpp.o:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/count.dir/build.make agitr/CMakeFiles/count.dir/src/count.cpp.o
+.PHONY : src/count.cpp.o
+
+src/count.i: src/count.cpp.i
+
+.PHONY : src/count.i
+
+# target to preprocess a source file
+src/count.cpp.i:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/count.dir/build.make agitr/CMakeFiles/count.dir/src/count.cpp.i
+.PHONY : src/count.cpp.i
+
+src/count.s: src/count.cpp.s
+
+.PHONY : src/count.s
+
+# target to generate assembly for a file
+src/count.cpp.s:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/count.dir/build.make agitr/CMakeFiles/count.dir/src/count.cpp.s
+.PHONY : src/count.cpp.s
+
 src/hello.o: src/hello.cpp.o
 
 .PHONY : src/hello.o
@@ -755,6 +797,7 @@ help:
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... turtlesim_generate_messages_py"
 	@echo "... install/strip"
+	@echo "... count"
 	@echo "... turtlesim_generate_messages_nodejs"
 	@echo "... turtlesim_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
@@ -787,6 +830,9 @@ help:
 	@echo "... std_srvs_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... turtlesim_generate_messages_eus"
+	@echo "... src/count.o"
+	@echo "... src/count.i"
+	@echo "... src/count.s"
 	@echo "... src/hello.o"
 	@echo "... src/hello.i"
 	@echo "... src/hello.s"

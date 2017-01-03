@@ -283,6 +283,19 @@ turtlesim_generate_messages_py/fast:
 .PHONY : turtlesim_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named count
+
+# Build rule for target.
+count: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 count
+.PHONY : count
+
+# fast build rule for target.
+count/fast:
+	$(MAKE) -f agitr/CMakeFiles/count.dir/build.make agitr/CMakeFiles/count.dir/build
+.PHONY : count/fast
+
+#=============================================================================
 # Target rules for targets named turtlesim_generate_messages_nodejs
 
 # Build rule for target.
@@ -707,6 +720,7 @@ help:
 	@echo "... gtest_main"
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... turtlesim_generate_messages_py"
+	@echo "... count"
 	@echo "... turtlesim_generate_messages_nodejs"
 	@echo "... turtlesim_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"

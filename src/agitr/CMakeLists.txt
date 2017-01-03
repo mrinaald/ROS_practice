@@ -128,6 +128,7 @@ include_directories(include ${catkin_INCLUDE_DIRS})
 add_executable(hello src/hello.cpp)
 add_executable(pubvel src/pubvel.cpp)
 add_executable(subpose src/subpose.cpp)
+add_executable(count src/count.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
@@ -140,6 +141,7 @@ add_executable(subpose src/subpose.cpp)
 target_link_libraries(hello ${catkin_LIBRARIES})
 target_link_libraries(pubvel ${catkin_LIBRARIES})
 target_link_libraries(subpose ${catkin_LIBRARIES})
+target_link_libraries(count ${catkin_LIBRARIES})
 
 #############
 ## Install ##
