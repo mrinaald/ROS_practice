@@ -257,6 +257,19 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
+# Target rules for targets named once
+
+# Build rule for target.
+once: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 once
+.PHONY : once
+
+# fast build rule for target.
+once/fast:
+	$(MAKE) -f agitr/CMakeFiles/once.dir/build.make agitr/CMakeFiles/once.dir/build
+.PHONY : once/fast
+
+#=============================================================================
 # Target rules for targets named std_srvs_generate_messages_nodejs
 
 # Build rule for target.
@@ -718,6 +731,7 @@ help:
 	@echo "... test"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... once"
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... turtlesim_generate_messages_py"
 	@echo "... count"

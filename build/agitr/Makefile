@@ -89,17 +89,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -110,6 +99,17 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
@@ -164,6 +164,21 @@ preinstall/fast:
 depend:
 	cd /home/mrinaal/git/ROS_practice/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+agitr/CMakeFiles/once.dir/rule:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/once.dir/rule
+.PHONY : agitr/CMakeFiles/once.dir/rule
+
+# Convenience name for target.
+once: agitr/CMakeFiles/once.dir/rule
+
+.PHONY : once
+
+# fast build rule for target.
+once/fast:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/once.dir/build.make agitr/CMakeFiles/once.dir/build
+.PHONY : once/fast
 
 # Convenience name for target.
 agitr/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule:
@@ -729,6 +744,33 @@ src/hello.cpp.s:
 	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/hello.dir/build.make agitr/CMakeFiles/hello.dir/src/hello.cpp.s
 .PHONY : src/hello.cpp.s
 
+src/once.o: src/once.cpp.o
+
+.PHONY : src/once.o
+
+# target to build an object file
+src/once.cpp.o:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/once.dir/build.make agitr/CMakeFiles/once.dir/src/once.cpp.o
+.PHONY : src/once.cpp.o
+
+src/once.i: src/once.cpp.i
+
+.PHONY : src/once.i
+
+# target to preprocess a source file
+src/once.cpp.i:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/once.dir/build.make agitr/CMakeFiles/once.dir/src/once.cpp.i
+.PHONY : src/once.cpp.i
+
+src/once.s: src/once.cpp.s
+
+.PHONY : src/once.s
+
+# target to generate assembly for a file
+src/once.cpp.s:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/once.dir/build.make agitr/CMakeFiles/once.dir/src/once.cpp.s
+.PHONY : src/once.cpp.s
+
 src/pubvel.o: src/pubvel.cpp.o
 
 .PHONY : src/pubvel.o
@@ -792,8 +834,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... install"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... edit_cache"
+	@echo "... once"
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... turtlesim_generate_messages_py"
 	@echo "... install/strip"
@@ -836,6 +879,9 @@ help:
 	@echo "... src/hello.o"
 	@echo "... src/hello.i"
 	@echo "... src/hello.s"
+	@echo "... src/once.o"
+	@echo "... src/once.i"
+	@echo "... src/once.s"
 	@echo "... src/pubvel.o"
 	@echo "... src/pubvel.i"
 	@echo "... src/pubvel.s"
