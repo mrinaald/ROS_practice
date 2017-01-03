@@ -166,6 +166,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+agitr/CMakeFiles/throttle.dir/rule:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/throttle.dir/rule
+.PHONY : agitr/CMakeFiles/throttle.dir/rule
+
+# Convenience name for target.
+throttle: agitr/CMakeFiles/throttle.dir/rule
+
+.PHONY : throttle
+
+# fast build rule for target.
+throttle/fast:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/throttle.dir/build.make agitr/CMakeFiles/throttle.dir/build
+.PHONY : throttle/fast
+
+# Convenience name for target.
 agitr/CMakeFiles/once.dir/rule:
 	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/once.dir/rule
 .PHONY : agitr/CMakeFiles/once.dir/rule
@@ -825,6 +840,33 @@ src/subpose.cpp.s:
 	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/subpose.dir/build.make agitr/CMakeFiles/subpose.dir/src/subpose.cpp.s
 .PHONY : src/subpose.cpp.s
 
+src/throttle.o: src/throttle.cpp.o
+
+.PHONY : src/throttle.o
+
+# target to build an object file
+src/throttle.cpp.o:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/throttle.dir/build.make agitr/CMakeFiles/throttle.dir/src/throttle.cpp.o
+.PHONY : src/throttle.cpp.o
+
+src/throttle.i: src/throttle.cpp.i
+
+.PHONY : src/throttle.i
+
+# target to preprocess a source file
+src/throttle.cpp.i:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/throttle.dir/build.make agitr/CMakeFiles/throttle.dir/src/throttle.cpp.i
+.PHONY : src/throttle.cpp.i
+
+src/throttle.s: src/throttle.cpp.s
+
+.PHONY : src/throttle.s
+
+# target to generate assembly for a file
+src/throttle.cpp.s:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/throttle.dir/build.make agitr/CMakeFiles/throttle.dir/src/throttle.cpp.s
+.PHONY : src/throttle.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -835,6 +877,7 @@ help:
 	@echo "... install"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... throttle"
 	@echo "... edit_cache"
 	@echo "... once"
 	@echo "... std_srvs_generate_messages_nodejs"
@@ -888,6 +931,9 @@ help:
 	@echo "... src/subpose.o"
 	@echo "... src/subpose.i"
 	@echo "... src/subpose.s"
+	@echo "... src/throttle.o"
+	@echo "... src/throttle.i"
+	@echo "... src/throttle.s"
 .PHONY : help
 
 
