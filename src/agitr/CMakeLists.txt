@@ -131,6 +131,7 @@ add_executable(subpose src/subpose.cpp)
 add_executable(count src/count.cpp)
 add_executable(once src/once.cpp)
 add_executable(throttle src/throttle.cpp)
+add_executable(reverse_cmd_vel src/reverse_cmd_vel.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
@@ -146,6 +147,7 @@ target_link_libraries(subpose ${catkin_LIBRARIES})
 target_link_libraries(count ${catkin_LIBRARIES})
 target_link_libraries(once ${catkin_LIBRARIES})
 target_link_libraries(throttle ${catkin_LIBRARIES})
+target_link_libraries(reverse_cmd_vel ${catkin_LIBRARIES})
 
 #############
 ## Install ##

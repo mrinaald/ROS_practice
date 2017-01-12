@@ -283,6 +283,19 @@ once/fast:
 .PHONY : once/fast
 
 #=============================================================================
+# Target rules for targets named reverse_cmd_vel
+
+# Build rule for target.
+reverse_cmd_vel: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 reverse_cmd_vel
+.PHONY : reverse_cmd_vel
+
+# fast build rule for target.
+reverse_cmd_vel/fast:
+	$(MAKE) -f agitr/CMakeFiles/reverse_cmd_vel.dir/build.make agitr/CMakeFiles/reverse_cmd_vel.dir/build
+.PHONY : reverse_cmd_vel/fast
+
+#=============================================================================
 # Target rules for targets named std_srvs_generate_messages_nodejs
 
 # Build rule for target.
@@ -746,6 +759,7 @@ help:
 	@echo "... gtest_main"
 	@echo "... throttle"
 	@echo "... once"
+	@echo "... reverse_cmd_vel"
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... turtlesim_generate_messages_py"
 	@echo "... count"

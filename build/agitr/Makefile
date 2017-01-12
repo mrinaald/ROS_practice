@@ -196,6 +196,21 @@ once/fast:
 .PHONY : once/fast
 
 # Convenience name for target.
+agitr/CMakeFiles/reverse_cmd_vel.dir/rule:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/reverse_cmd_vel.dir/rule
+.PHONY : agitr/CMakeFiles/reverse_cmd_vel.dir/rule
+
+# Convenience name for target.
+reverse_cmd_vel: agitr/CMakeFiles/reverse_cmd_vel.dir/rule
+
+.PHONY : reverse_cmd_vel
+
+# fast build rule for target.
+reverse_cmd_vel/fast:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/reverse_cmd_vel.dir/build.make agitr/CMakeFiles/reverse_cmd_vel.dir/build
+.PHONY : reverse_cmd_vel/fast
+
+# Convenience name for target.
 agitr/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule:
 	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
 .PHONY : agitr/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
@@ -813,6 +828,33 @@ src/pubvel.cpp.s:
 	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/pubvel.dir/build.make agitr/CMakeFiles/pubvel.dir/src/pubvel.cpp.s
 .PHONY : src/pubvel.cpp.s
 
+src/reverse_cmd_vel.o: src/reverse_cmd_vel.cpp.o
+
+.PHONY : src/reverse_cmd_vel.o
+
+# target to build an object file
+src/reverse_cmd_vel.cpp.o:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/reverse_cmd_vel.dir/build.make agitr/CMakeFiles/reverse_cmd_vel.dir/src/reverse_cmd_vel.cpp.o
+.PHONY : src/reverse_cmd_vel.cpp.o
+
+src/reverse_cmd_vel.i: src/reverse_cmd_vel.cpp.i
+
+.PHONY : src/reverse_cmd_vel.i
+
+# target to preprocess a source file
+src/reverse_cmd_vel.cpp.i:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/reverse_cmd_vel.dir/build.make agitr/CMakeFiles/reverse_cmd_vel.dir/src/reverse_cmd_vel.cpp.i
+.PHONY : src/reverse_cmd_vel.cpp.i
+
+src/reverse_cmd_vel.s: src/reverse_cmd_vel.cpp.s
+
+.PHONY : src/reverse_cmd_vel.s
+
+# target to generate assembly for a file
+src/reverse_cmd_vel.cpp.s:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/reverse_cmd_vel.dir/build.make agitr/CMakeFiles/reverse_cmd_vel.dir/src/reverse_cmd_vel.cpp.s
+.PHONY : src/reverse_cmd_vel.cpp.s
+
 src/subpose.o: src/subpose.cpp.o
 
 .PHONY : src/subpose.o
@@ -880,6 +922,7 @@ help:
 	@echo "... throttle"
 	@echo "... edit_cache"
 	@echo "... once"
+	@echo "... reverse_cmd_vel"
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... turtlesim_generate_messages_py"
 	@echo "... install/strip"
@@ -928,6 +971,9 @@ help:
 	@echo "... src/pubvel.o"
 	@echo "... src/pubvel.i"
 	@echo "... src/pubvel.s"
+	@echo "... src/reverse_cmd_vel.o"
+	@echo "... src/reverse_cmd_vel.i"
+	@echo "... src/reverse_cmd_vel.s"
 	@echo "... src/subpose.o"
 	@echo "... src/subpose.i"
 	@echo "... src/subpose.s"
