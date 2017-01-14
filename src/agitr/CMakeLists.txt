@@ -135,6 +135,7 @@ add_executable(reverse_cmd_vel src/reverse_cmd_vel.cpp)
 add_executable(set_bg_color src/set_bg_color.cpp)
 add_executable(pubvel_with_max src/pubvel_with_max.cpp)
 add_executable(spawn_turtle src/spawn_turtle.cpp)
+add_executable(pubvel_toggle src/pubvel_toggle.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
@@ -154,6 +155,7 @@ target_link_libraries(reverse_cmd_vel ${catkin_LIBRARIES})
 target_link_libraries(set_bg_color ${catkin_LIBRARIES})
 target_link_libraries(pubvel_with_max ${catkin_LIBRARIES})
 target_link_libraries(spawn_turtle ${catkin_LIBRARIES})
+target_link_libraries(pubvel_toggle ${catkin_LIBRARIES})
 
 #############
 ## Install ##

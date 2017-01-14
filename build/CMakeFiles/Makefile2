@@ -309,6 +309,7 @@ clean: gtest/CMakeFiles/gtest_main.dir/clean
 agitr/all: agitr/CMakeFiles/pubvel.dir/all
 agitr/all: agitr/CMakeFiles/hello.dir/all
 agitr/all: agitr/CMakeFiles/spawn_turtle.dir/all
+agitr/all: agitr/CMakeFiles/pubvel_toggle.dir/all
 agitr/all: agitr/CMakeFiles/subpose.dir/all
 agitr/all: agitr/CMakeFiles/count.dir/all
 agitr/all: agitr/CMakeFiles/reverse_cmd_vel.dir/all
@@ -326,7 +327,6 @@ agitr/clean: agitr/CMakeFiles/turtlesim_generate_messages_cpp.dir/clean
 agitr/clean: agitr/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
 agitr/clean: agitr/CMakeFiles/pubvel.dir/clean
 agitr/clean: agitr/CMakeFiles/hello.dir/clean
-agitr/clean: agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 agitr/clean: agitr/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
 agitr/clean: agitr/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
 agitr/clean: agitr/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
@@ -340,10 +340,14 @@ agitr/clean: agitr/CMakeFiles/std_srvs_generate_messages_py.dir/clean
 agitr/clean: agitr/CMakeFiles/spawn_turtle.dir/clean
 agitr/clean: agitr/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
 agitr/clean: agitr/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+agitr/clean: agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+agitr/clean: agitr/CMakeFiles/pubvel_toggle.dir/clean
 agitr/clean: agitr/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
 agitr/clean: agitr/CMakeFiles/subpose.dir/clean
 agitr/clean: agitr/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
 agitr/clean: agitr/CMakeFiles/roscpp_generate_messages_py.dir/clean
+agitr/clean: agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+agitr/clean: agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/clean
 agitr/clean: agitr/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
 agitr/clean: agitr/CMakeFiles/turtlesim_generate_messages_nodejs.dir/clean
 agitr/clean: agitr/CMakeFiles/count.dir/clean
@@ -358,8 +362,6 @@ agitr/clean: agitr/CMakeFiles/throttle.dir/clean
 agitr/clean: agitr/CMakeFiles/set_bg_color.dir/clean
 agitr/clean: agitr/CMakeFiles/pubvel_with_max.dir/clean
 agitr/clean: agitr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
-agitr/clean: agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-agitr/clean: agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/clean
 
 .PHONY : agitr/clean
 
@@ -567,38 +569,6 @@ agitr/CMakeFiles/hello.dir/clean:
 
 # clean rule for target.
 clean: agitr/CMakeFiles/hello.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target agitr/CMakeFiles/roscpp_generate_messages_lisp.dir
-
-# All Build rule for target.
-agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/all:
-	$(MAKE) -f agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
-	$(MAKE) -f agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
-.PHONY : agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrinaal/git/ROS_practice/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrinaal/git/ROS_practice/build/CMakeFiles 0
-.PHONY : agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-.PHONY : roscpp_generate_messages_lisp
-
-# clean rule for target.
-agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
-	$(MAKE) -f agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-.PHONY : agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-
-# clean rule for target.
-clean: agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 
 .PHONY : clean
 
@@ -929,7 +899,7 @@ clean: agitr/CMakeFiles/std_srvs_generate_messages_py.dir/clean
 agitr/CMakeFiles/spawn_turtle.dir/all:
 	$(MAKE) -f agitr/CMakeFiles/spawn_turtle.dir/build.make agitr/CMakeFiles/spawn_turtle.dir/depend
 	$(MAKE) -f agitr/CMakeFiles/spawn_turtle.dir/build.make agitr/CMakeFiles/spawn_turtle.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=19,20 "Built target spawn_turtle"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=21,22 "Built target spawn_turtle"
 .PHONY : agitr/CMakeFiles/spawn_turtle.dir/all
 
 # Include target in all.
@@ -1024,6 +994,75 @@ clean: agitr/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target agitr/CMakeFiles/roscpp_generate_messages_lisp.dir
+
+# All Build rule for target.
+agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/all:
+	$(MAKE) -f agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
+	$(MAKE) -f agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
+.PHONY : agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrinaal/git/ROS_practice/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrinaal/git/ROS_practice/build/CMakeFiles 0
+.PHONY : agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_lisp: agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+.PHONY : roscpp_generate_messages_lisp
+
+# clean rule for target.
+agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
+	$(MAKE) -f agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+.PHONY : agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+
+# clean rule for target.
+clean: agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target agitr/CMakeFiles/pubvel_toggle.dir
+
+# All Build rule for target.
+agitr/CMakeFiles/pubvel_toggle.dir/all:
+	$(MAKE) -f agitr/CMakeFiles/pubvel_toggle.dir/build.make agitr/CMakeFiles/pubvel_toggle.dir/depend
+	$(MAKE) -f agitr/CMakeFiles/pubvel_toggle.dir/build.make agitr/CMakeFiles/pubvel_toggle.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=13,14 "Built target pubvel_toggle"
+.PHONY : agitr/CMakeFiles/pubvel_toggle.dir/all
+
+# Include target in all.
+all: agitr/CMakeFiles/pubvel_toggle.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+agitr/CMakeFiles/pubvel_toggle.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrinaal/git/ROS_practice/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/pubvel_toggle.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrinaal/git/ROS_practice/build/CMakeFiles 0
+.PHONY : agitr/CMakeFiles/pubvel_toggle.dir/rule
+
+# Convenience name for target.
+pubvel_toggle: agitr/CMakeFiles/pubvel_toggle.dir/rule
+
+.PHONY : pubvel_toggle
+
+# clean rule for target.
+agitr/CMakeFiles/pubvel_toggle.dir/clean:
+	$(MAKE) -f agitr/CMakeFiles/pubvel_toggle.dir/build.make agitr/CMakeFiles/pubvel_toggle.dir/clean
+.PHONY : agitr/CMakeFiles/pubvel_toggle.dir/clean
+
+# clean rule for target.
+clean: agitr/CMakeFiles/pubvel_toggle.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target agitr/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
 
 # All Build rule for target.
@@ -1062,7 +1101,7 @@ clean: agitr/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
 agitr/CMakeFiles/subpose.dir/all:
 	$(MAKE) -f agitr/CMakeFiles/subpose.dir/build.make agitr/CMakeFiles/subpose.dir/depend
 	$(MAKE) -f agitr/CMakeFiles/subpose.dir/build.make agitr/CMakeFiles/subpose.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=21,22 "Built target subpose"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=23,24 "Built target subpose"
 .PHONY : agitr/CMakeFiles/subpose.dir/all
 
 # Include target in all.
@@ -1153,6 +1192,70 @@ agitr/CMakeFiles/roscpp_generate_messages_py.dir/clean:
 
 # clean rule for target.
 clean: agitr/CMakeFiles/roscpp_generate_messages_py.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
+.PHONY : agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrinaal/git/ROS_practice/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrinaal/git/ROS_practice/build/CMakeFiles 0
+.PHONY : agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_lisp: agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : std_msgs_generate_messages_lisp
+
+# clean rule for target.
+agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+.PHONY : agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+
+# clean rule for target.
+clean: agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir
+
+# All Build rule for target.
+agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/all:
+	$(MAKE) -f agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/build.make agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/depend
+	$(MAKE) -f agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/build.make agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num= "Built target turtlesim_generate_messages_lisp"
+.PHONY : agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrinaal/git/ROS_practice/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrinaal/git/ROS_practice/build/CMakeFiles 0
+.PHONY : agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+turtlesim_generate_messages_lisp: agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule
+
+.PHONY : turtlesim_generate_messages_lisp
+
+# clean rule for target.
+agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/clean:
+	$(MAKE) -f agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/build.make agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/clean
+.PHONY : agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/clean
+
+# clean rule for target.
+clean: agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/clean
 
 .PHONY : clean
 
@@ -1360,7 +1463,7 @@ clean: agitr/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
 agitr/CMakeFiles/reverse_cmd_vel.dir/all:
 	$(MAKE) -f agitr/CMakeFiles/reverse_cmd_vel.dir/build.make agitr/CMakeFiles/reverse_cmd_vel.dir/depend
 	$(MAKE) -f agitr/CMakeFiles/reverse_cmd_vel.dir/build.make agitr/CMakeFiles/reverse_cmd_vel.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=15,16 "Built target reverse_cmd_vel"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=17,18 "Built target reverse_cmd_vel"
 .PHONY : agitr/CMakeFiles/reverse_cmd_vel.dir/all
 
 # Include target in all.
@@ -1498,7 +1601,7 @@ clean: agitr/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 agitr/CMakeFiles/throttle.dir/all:
 	$(MAKE) -f agitr/CMakeFiles/throttle.dir/build.make agitr/CMakeFiles/throttle.dir/depend
 	$(MAKE) -f agitr/CMakeFiles/throttle.dir/build.make agitr/CMakeFiles/throttle.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=23,24 "Built target throttle"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=25,26 "Built target throttle"
 .PHONY : agitr/CMakeFiles/throttle.dir/all
 
 # Include target in all.
@@ -1535,7 +1638,7 @@ clean: agitr/CMakeFiles/throttle.dir/clean
 agitr/CMakeFiles/set_bg_color.dir/all:
 	$(MAKE) -f agitr/CMakeFiles/set_bg_color.dir/build.make agitr/CMakeFiles/set_bg_color.dir/depend
 	$(MAKE) -f agitr/CMakeFiles/set_bg_color.dir/build.make agitr/CMakeFiles/set_bg_color.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=17,18 "Built target set_bg_color"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=19,20 "Built target set_bg_color"
 .PHONY : agitr/CMakeFiles/set_bg_color.dir/all
 
 # Include target in all.
@@ -1572,7 +1675,7 @@ clean: agitr/CMakeFiles/set_bg_color.dir/clean
 agitr/CMakeFiles/pubvel_with_max.dir/all:
 	$(MAKE) -f agitr/CMakeFiles/pubvel_with_max.dir/build.make agitr/CMakeFiles/pubvel_with_max.dir/depend
 	$(MAKE) -f agitr/CMakeFiles/pubvel_with_max.dir/build.make agitr/CMakeFiles/pubvel_with_max.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=13,14 "Built target pubvel_with_max"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=15,16 "Built target pubvel_with_max"
 .PHONY : agitr/CMakeFiles/pubvel_with_max.dir/all
 
 # Include target in all.
@@ -1631,70 +1734,6 @@ agitr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean:
 
 # clean rule for target.
 clean: agitr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir
-
-# All Build rule for target.
-agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) -f agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) -f agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
-.PHONY : agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrinaal/git/ROS_practice/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrinaal/git/ROS_practice/build/CMakeFiles 0
-.PHONY : agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# clean rule for target.
-agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-.PHONY : agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-
-# clean rule for target.
-clean: agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir
-
-# All Build rule for target.
-agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/all:
-	$(MAKE) -f agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/build.make agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/depend
-	$(MAKE) -f agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/build.make agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num= "Built target turtlesim_generate_messages_lisp"
-.PHONY : agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrinaal/git/ROS_practice/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrinaal/git/ROS_practice/build/CMakeFiles 0
-.PHONY : agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-turtlesim_generate_messages_lisp: agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule
-
-.PHONY : turtlesim_generate_messages_lisp
-
-# clean rule for target.
-agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/clean:
-	$(MAKE) -f agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/build.make agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/clean
-.PHONY : agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/clean
-
-# clean rule for target.
-clean: agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/clean
 
 .PHONY : clean
 

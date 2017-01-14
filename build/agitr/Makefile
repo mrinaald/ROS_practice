@@ -77,6 +77,18 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -120,18 +132,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -254,21 +254,6 @@ hello: agitr/CMakeFiles/hello.dir/rule
 hello/fast:
 	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/hello.dir/build.make agitr/CMakeFiles/hello.dir/build
 .PHONY : hello/fast
-
-# Convenience name for target.
-agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
 
 # Convenience name for target.
 agitr/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
@@ -466,6 +451,36 @@ rosgraph_msgs_generate_messages_cpp/fast:
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
+agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+.PHONY : agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_lisp: agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+.PHONY : roscpp_generate_messages_lisp
+
+# fast build rule for target.
+roscpp_generate_messages_lisp/fast:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
+
+# Convenience name for target.
+agitr/CMakeFiles/pubvel_toggle.dir/rule:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/pubvel_toggle.dir/rule
+.PHONY : agitr/CMakeFiles/pubvel_toggle.dir/rule
+
+# Convenience name for target.
+pubvel_toggle: agitr/CMakeFiles/pubvel_toggle.dir/rule
+
+.PHONY : pubvel_toggle
+
+# fast build rule for target.
+pubvel_toggle/fast:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/pubvel_toggle.dir/build.make agitr/CMakeFiles/pubvel_toggle.dir/build
+.PHONY : pubvel_toggle/fast
+
+# Convenience name for target.
 agitr/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 .PHONY : agitr/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
@@ -524,6 +539,36 @@ roscpp_generate_messages_py: agitr/CMakeFiles/roscpp_generate_messages_py.dir/ru
 roscpp_generate_messages_py/fast:
 	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/roscpp_generate_messages_py.dir/build.make agitr/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
+
+# Convenience name for target.
+agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+.PHONY : agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_lisp: agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule
+.PHONY : agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+turtlesim_generate_messages_lisp: agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule
+
+.PHONY : turtlesim_generate_messages_lisp
+
+# fast build rule for target.
+turtlesim_generate_messages_lisp/fast:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/build.make agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/build
+.PHONY : turtlesim_generate_messages_lisp/fast
 
 # Convenience name for target.
 agitr/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
@@ -735,36 +780,6 @@ geometry_msgs_generate_messages_cpp/fast:
 	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make agitr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
 .PHONY : geometry_msgs_generate_messages_cpp/fast
 
-# Convenience name for target.
-agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule:
-	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule
-.PHONY : agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-turtlesim_generate_messages_lisp: agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule
-
-.PHONY : turtlesim_generate_messages_lisp
-
-# fast build rule for target.
-turtlesim_generate_messages_lisp/fast:
-	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/build.make agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/build
-.PHONY : turtlesim_generate_messages_lisp/fast
-
 src/count.o: src/count.cpp.o
 
 .PHONY : src/count.o
@@ -872,6 +887,33 @@ src/pubvel.s: src/pubvel.cpp.s
 src/pubvel.cpp.s:
 	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/pubvel.dir/build.make agitr/CMakeFiles/pubvel.dir/src/pubvel.cpp.s
 .PHONY : src/pubvel.cpp.s
+
+src/pubvel_toggle.o: src/pubvel_toggle.cpp.o
+
+.PHONY : src/pubvel_toggle.o
+
+# target to build an object file
+src/pubvel_toggle.cpp.o:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/pubvel_toggle.dir/build.make agitr/CMakeFiles/pubvel_toggle.dir/src/pubvel_toggle.cpp.o
+.PHONY : src/pubvel_toggle.cpp.o
+
+src/pubvel_toggle.i: src/pubvel_toggle.cpp.i
+
+.PHONY : src/pubvel_toggle.i
+
+# target to preprocess a source file
+src/pubvel_toggle.cpp.i:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/pubvel_toggle.dir/build.make agitr/CMakeFiles/pubvel_toggle.dir/src/pubvel_toggle.cpp.i
+.PHONY : src/pubvel_toggle.cpp.i
+
+src/pubvel_toggle.s: src/pubvel_toggle.cpp.s
+
+.PHONY : src/pubvel_toggle.s
+
+# target to generate assembly for a file
+src/pubvel_toggle.cpp.s:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/pubvel_toggle.dir/build.make agitr/CMakeFiles/pubvel_toggle.dir/src/pubvel_toggle.cpp.s
+.PHONY : src/pubvel_toggle.cpp.s
 
 src/pubvel_with_max.o: src/pubvel_with_max.cpp.o
 
@@ -1048,7 +1090,6 @@ help:
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... pubvel"
 	@echo "... hello"
-	@echo "... roscpp_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... std_srvs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_py"
@@ -1063,10 +1104,15 @@ help:
 	@echo "... spawn_turtle"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... roscpp_generate_messages_lisp"
+	@echo "... pubvel_toggle"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... subpose"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_py"
+	@echo "... install"
+	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... turtlesim_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... turtlesim_generate_messages_nodejs"
 	@echo "... count"
@@ -1085,9 +1131,6 @@ help:
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... test"
 	@echo "... rebuild_cache"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... turtlesim_generate_messages_lisp"
-	@echo "... install"
 	@echo "... src/count.o"
 	@echo "... src/count.i"
 	@echo "... src/count.s"
@@ -1100,6 +1143,9 @@ help:
 	@echo "... src/pubvel.o"
 	@echo "... src/pubvel.i"
 	@echo "... src/pubvel.s"
+	@echo "... src/pubvel_toggle.o"
+	@echo "... src/pubvel_toggle.i"
+	@echo "... src/pubvel_toggle.s"
 	@echo "... src/pubvel_with_max.o"
 	@echo "... src/pubvel_with_max.i"
 	@echo "... src/pubvel_with_max.s"
