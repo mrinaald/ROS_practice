@@ -6,7 +6,7 @@
 
 int main(int argc, char** argv)
 {
-	ros::init(argc, argv, "pubvel_with_max");
+	ros::init(argc, argv, "publish_velocity");
 	ros::NodeHandle nh;
 	ros::Publisher pub = nh.advertise<geometry_msgs::Twist>(
 		"turtle1/cmd_vel", 1000);
