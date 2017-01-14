@@ -166,6 +166,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+agitr/CMakeFiles/set_bg_color.dir/rule:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/set_bg_color.dir/rule
+.PHONY : agitr/CMakeFiles/set_bg_color.dir/rule
+
+# Convenience name for target.
+set_bg_color: agitr/CMakeFiles/set_bg_color.dir/rule
+
+.PHONY : set_bg_color
+
+# fast build rule for target.
+set_bg_color/fast:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/set_bg_color.dir/build.make agitr/CMakeFiles/set_bg_color.dir/build
+.PHONY : set_bg_color/fast
+
+# Convenience name for target.
 agitr/CMakeFiles/throttle.dir/rule:
 	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/throttle.dir/rule
 .PHONY : agitr/CMakeFiles/throttle.dir/rule
@@ -855,6 +870,33 @@ src/reverse_cmd_vel.cpp.s:
 	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/reverse_cmd_vel.dir/build.make agitr/CMakeFiles/reverse_cmd_vel.dir/src/reverse_cmd_vel.cpp.s
 .PHONY : src/reverse_cmd_vel.cpp.s
 
+src/set_bg_color.o: src/set_bg_color.cpp.o
+
+.PHONY : src/set_bg_color.o
+
+# target to build an object file
+src/set_bg_color.cpp.o:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/set_bg_color.dir/build.make agitr/CMakeFiles/set_bg_color.dir/src/set_bg_color.cpp.o
+.PHONY : src/set_bg_color.cpp.o
+
+src/set_bg_color.i: src/set_bg_color.cpp.i
+
+.PHONY : src/set_bg_color.i
+
+# target to preprocess a source file
+src/set_bg_color.cpp.i:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/set_bg_color.dir/build.make agitr/CMakeFiles/set_bg_color.dir/src/set_bg_color.cpp.i
+.PHONY : src/set_bg_color.cpp.i
+
+src/set_bg_color.s: src/set_bg_color.cpp.s
+
+.PHONY : src/set_bg_color.s
+
+# target to generate assembly for a file
+src/set_bg_color.cpp.s:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/set_bg_color.dir/build.make agitr/CMakeFiles/set_bg_color.dir/src/set_bg_color.cpp.s
+.PHONY : src/set_bg_color.cpp.s
+
 src/subpose.o: src/subpose.cpp.o
 
 .PHONY : src/subpose.o
@@ -919,6 +961,7 @@ help:
 	@echo "... install"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... set_bg_color"
 	@echo "... throttle"
 	@echo "... edit_cache"
 	@echo "... once"
@@ -974,6 +1017,9 @@ help:
 	@echo "... src/reverse_cmd_vel.o"
 	@echo "... src/reverse_cmd_vel.i"
 	@echo "... src/reverse_cmd_vel.s"
+	@echo "... src/set_bg_color.o"
+	@echo "... src/set_bg_color.i"
+	@echo "... src/set_bg_color.s"
 	@echo "... src/subpose.o"
 	@echo "... src/subpose.i"
 	@echo "... src/subpose.s"

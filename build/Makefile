@@ -257,6 +257,19 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
+# Target rules for targets named set_bg_color
+
+# Build rule for target.
+set_bg_color: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 set_bg_color
+.PHONY : set_bg_color
+
+# fast build rule for target.
+set_bg_color/fast:
+	$(MAKE) -f agitr/CMakeFiles/set_bg_color.dir/build.make agitr/CMakeFiles/set_bg_color.dir/build
+.PHONY : set_bg_color/fast
+
+#=============================================================================
 # Target rules for targets named throttle
 
 # Build rule for target.
@@ -757,6 +770,7 @@ help:
 	@echo "... test"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... set_bg_color"
 	@echo "... throttle"
 	@echo "... once"
 	@echo "... reverse_cmd_vel"

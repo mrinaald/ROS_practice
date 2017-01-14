@@ -23,6 +23,7 @@
 /home/mrinaal/git/ROS_practice/build/agitr/CMakeFiles/install.dir
 /home/mrinaal/git/ROS_practice/build/agitr/CMakeFiles/rebuild_cache.dir
 /home/mrinaal/git/ROS_practice/build/agitr/CMakeFiles/test.dir
+/home/mrinaal/git/ROS_practice/build/agitr/CMakeFiles/set_bg_color.dir
 /home/mrinaal/git/ROS_practice/build/agitr/CMakeFiles/throttle.dir
 /home/mrinaal/git/ROS_practice/build/agitr/CMakeFiles/edit_cache.dir
 /home/mrinaal/git/ROS_practice/build/agitr/CMakeFiles/once.dir
