@@ -166,6 +166,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+agitr/CMakeFiles/pubvel_with_max.dir/rule:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/pubvel_with_max.dir/rule
+.PHONY : agitr/CMakeFiles/pubvel_with_max.dir/rule
+
+# Convenience name for target.
+pubvel_with_max: agitr/CMakeFiles/pubvel_with_max.dir/rule
+
+.PHONY : pubvel_with_max
+
+# fast build rule for target.
+pubvel_with_max/fast:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/pubvel_with_max.dir/build.make agitr/CMakeFiles/pubvel_with_max.dir/build
+.PHONY : pubvel_with_max/fast
+
+# Convenience name for target.
 agitr/CMakeFiles/set_bg_color.dir/rule:
 	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/set_bg_color.dir/rule
 .PHONY : agitr/CMakeFiles/set_bg_color.dir/rule
@@ -843,6 +858,33 @@ src/pubvel.cpp.s:
 	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/pubvel.dir/build.make agitr/CMakeFiles/pubvel.dir/src/pubvel.cpp.s
 .PHONY : src/pubvel.cpp.s
 
+src/pubvel_with_max.o: src/pubvel_with_max.cpp.o
+
+.PHONY : src/pubvel_with_max.o
+
+# target to build an object file
+src/pubvel_with_max.cpp.o:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/pubvel_with_max.dir/build.make agitr/CMakeFiles/pubvel_with_max.dir/src/pubvel_with_max.cpp.o
+.PHONY : src/pubvel_with_max.cpp.o
+
+src/pubvel_with_max.i: src/pubvel_with_max.cpp.i
+
+.PHONY : src/pubvel_with_max.i
+
+# target to preprocess a source file
+src/pubvel_with_max.cpp.i:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/pubvel_with_max.dir/build.make agitr/CMakeFiles/pubvel_with_max.dir/src/pubvel_with_max.cpp.i
+.PHONY : src/pubvel_with_max.cpp.i
+
+src/pubvel_with_max.s: src/pubvel_with_max.cpp.s
+
+.PHONY : src/pubvel_with_max.s
+
+# target to generate assembly for a file
+src/pubvel_with_max.cpp.s:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/pubvel_with_max.dir/build.make agitr/CMakeFiles/pubvel_with_max.dir/src/pubvel_with_max.cpp.s
+.PHONY : src/pubvel_with_max.cpp.s
+
 src/reverse_cmd_vel.o: src/reverse_cmd_vel.cpp.o
 
 .PHONY : src/reverse_cmd_vel.o
@@ -961,6 +1003,7 @@ help:
 	@echo "... install"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... pubvel_with_max"
 	@echo "... set_bg_color"
 	@echo "... throttle"
 	@echo "... edit_cache"
@@ -1014,6 +1057,9 @@ help:
 	@echo "... src/pubvel.o"
 	@echo "... src/pubvel.i"
 	@echo "... src/pubvel.s"
+	@echo "... src/pubvel_with_max.o"
+	@echo "... src/pubvel_with_max.i"
+	@echo "... src/pubvel_with_max.s"
 	@echo "... src/reverse_cmd_vel.o"
 	@echo "... src/reverse_cmd_vel.i"
 	@echo "... src/reverse_cmd_vel.s"

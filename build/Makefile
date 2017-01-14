@@ -257,6 +257,19 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
+# Target rules for targets named pubvel_with_max
+
+# Build rule for target.
+pubvel_with_max: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pubvel_with_max
+.PHONY : pubvel_with_max
+
+# fast build rule for target.
+pubvel_with_max/fast:
+	$(MAKE) -f agitr/CMakeFiles/pubvel_with_max.dir/build.make agitr/CMakeFiles/pubvel_with_max.dir/build
+.PHONY : pubvel_with_max/fast
+
+#=============================================================================
 # Target rules for targets named set_bg_color
 
 # Build rule for target.
@@ -770,6 +783,7 @@ help:
 	@echo "... test"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... pubvel_with_max"
 	@echo "... set_bg_color"
 	@echo "... throttle"
 	@echo "... once"

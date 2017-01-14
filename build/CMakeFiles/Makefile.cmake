@@ -167,6 +167,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/doxygen.dir/DependInfo.cmake"
   "gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
   "gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
+  "agitr/CMakeFiles/pubvel_with_max.dir/DependInfo.cmake"
   "agitr/CMakeFiles/set_bg_color.dir/DependInfo.cmake"
   "agitr/CMakeFiles/throttle.dir/DependInfo.cmake"
   "agitr/CMakeFiles/once.dir/DependInfo.cmake"
