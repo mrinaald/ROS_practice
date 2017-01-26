@@ -1,0 +1,16 @@
+<launch>
+	<group ns="camera">
+		<node
+			pkg="agitr"
+			type="image_converter"
+			name="output_image"
+			required="true"
+		/>
+		<node
+			pkg="cv_camera"
+			type="cv_camera_node"
+			name="cv_camera"
+			required="true"
+		/>
+	</group>	
+</launch>

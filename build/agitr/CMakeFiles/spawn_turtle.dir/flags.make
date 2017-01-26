@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"agitr\"
 
-CXX_INCLUDES = -I/home/mrinaal/git/ROS_practice/src/agitr/include -I/opt/ros/kinetic/include 
+CXX_INCLUDES = -I/home/mrinaal/git/ROS_practice/src/agitr/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/include/opencv-3.1.0-dev/opencv -I/opt/ros/kinetic/include/opencv-3.1.0-dev 
 

@@ -56,49 +56,16 @@ CMAKE_BINARY_DIR = /home/mrinaal/git/ROS_practice/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target install/local
-install/local/fast: install/local
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-.PHONY : install/local/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -111,6 +78,38 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -122,16 +121,17 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -164,6 +164,21 @@ preinstall/fast:
 depend:
 	cd /home/mrinaal/git/ROS_practice/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+agitr/CMakeFiles/image_converter.dir/rule:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/image_converter.dir/rule
+.PHONY : agitr/CMakeFiles/image_converter.dir/rule
+
+# Convenience name for target.
+image_converter: agitr/CMakeFiles/image_converter.dir/rule
+
+.PHONY : image_converter
+
+# fast build rule for target.
+image_converter/fast:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/image_converter.dir/build.make agitr/CMakeFiles/image_converter.dir/build
+.PHONY : image_converter/fast
 
 # Convenience name for target.
 agitr/CMakeFiles/turtlesim_generate_messages_eus.dir/rule:
@@ -239,21 +254,6 @@ pubvel: agitr/CMakeFiles/pubvel.dir/rule
 pubvel/fast:
 	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/pubvel.dir/build.make agitr/CMakeFiles/pubvel.dir/build
 .PHONY : pubvel/fast
-
-# Convenience name for target.
-agitr/CMakeFiles/hello.dir/rule:
-	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/hello.dir/rule
-.PHONY : agitr/CMakeFiles/hello.dir/rule
-
-# Convenience name for target.
-hello: agitr/CMakeFiles/hello.dir/rule
-
-.PHONY : hello
-
-# fast build rule for target.
-hello/fast:
-	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/hello.dir/build.make agitr/CMakeFiles/hello.dir/build
-.PHONY : hello/fast
 
 # Convenience name for target.
 agitr/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
@@ -421,19 +421,34 @@ spawn_turtle/fast:
 .PHONY : spawn_turtle/fast
 
 # Convenience name for target.
-agitr/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : agitr/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+agitr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+.PHONY : agitr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_cpp: agitr/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+geometry_msgs_generate_messages_cpp: agitr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
 
-.PHONY : std_msgs_generate_messages_cpp
+.PHONY : geometry_msgs_generate_messages_cpp
 
 # fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make agitr/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
+geometry_msgs_generate_messages_cpp/fast:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make agitr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+agitr/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+.PHONY : agitr/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_nodejs: agitr/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+sensor_msgs_generate_messages_nodejs/fast:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make agitr/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+.PHONY : sensor_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 agitr/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
@@ -676,6 +691,96 @@ reverse_cmd_vel/fast:
 .PHONY : reverse_cmd_vel/fast
 
 # Convenience name for target.
+agitr/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+.PHONY : agitr/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_cpp: agitr/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_cpp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_cpp/fast:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make agitr/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+agitr/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+.PHONY : agitr/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_cpp: agitr/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : std_msgs_generate_messages_cpp
+
+# fast build rule for target.
+std_msgs_generate_messages_cpp/fast:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make agitr/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+agitr/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+.PHONY : agitr/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_eus: agitr/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_eus
+
+# fast build rule for target.
+sensor_msgs_generate_messages_eus/fast:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make agitr/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+.PHONY : sensor_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+agitr/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+.PHONY : agitr/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_lisp: agitr/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_lisp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_lisp/fast:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make agitr/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+agitr/CMakeFiles/hello.dir/rule:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/hello.dir/rule
+.PHONY : agitr/CMakeFiles/hello.dir/rule
+
+# Convenience name for target.
+hello: agitr/CMakeFiles/hello.dir/rule
+
+.PHONY : hello
+
+# fast build rule for target.
+hello/fast:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/hello.dir/build.make agitr/CMakeFiles/hello.dir/build
+.PHONY : hello/fast
+
+# Convenience name for target.
+agitr/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+.PHONY : agitr/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_py: agitr/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_py
+
+# fast build rule for target.
+sensor_msgs_generate_messages_py/fast:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make agitr/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+.PHONY : sensor_msgs_generate_messages_py/fast
+
+# Convenience name for target.
 agitr/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
 	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 .PHONY : agitr/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
@@ -765,21 +870,6 @@ pubvel_with_max/fast:
 	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/pubvel_with_max.dir/build.make agitr/CMakeFiles/pubvel_with_max.dir/build
 .PHONY : pubvel_with_max/fast
 
-# Convenience name for target.
-agitr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : agitr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_cpp: agitr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make agitr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
-
 src/count.o: src/count.cpp.o
 
 .PHONY : src/count.o
@@ -833,6 +923,33 @@ src/hello.s: src/hello.cpp.s
 src/hello.cpp.s:
 	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/hello.dir/build.make agitr/CMakeFiles/hello.dir/src/hello.cpp.s
 .PHONY : src/hello.cpp.s
+
+src/image_converter.o: src/image_converter.cpp.o
+
+.PHONY : src/image_converter.o
+
+# target to build an object file
+src/image_converter.cpp.o:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/image_converter.dir/build.make agitr/CMakeFiles/image_converter.dir/src/image_converter.cpp.o
+.PHONY : src/image_converter.cpp.o
+
+src/image_converter.i: src/image_converter.cpp.i
+
+.PHONY : src/image_converter.i
+
+# target to preprocess a source file
+src/image_converter.cpp.i:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/image_converter.dir/build.make agitr/CMakeFiles/image_converter.dir/src/image_converter.cpp.i
+.PHONY : src/image_converter.cpp.i
+
+src/image_converter.s: src/image_converter.cpp.s
+
+.PHONY : src/image_converter.s
+
+# target to generate assembly for a file
+src/image_converter.cpp.s:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/image_converter.dir/build.make agitr/CMakeFiles/image_converter.dir/src/image_converter.cpp.s
+.PHONY : src/image_converter.cpp.s
 
 src/once.o: src/once.cpp.o
 
@@ -1083,13 +1200,16 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... image_converter"
 	@echo "... turtlesim_generate_messages_eus"
 	@echo "... std_srvs_generate_messages_eus"
 	@echo "... turtlesim_generate_messages_cpp"
-	@echo "... install/local"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... pubvel"
-	@echo "... hello"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... std_srvs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_py"
@@ -1102,7 +1222,9 @@ help:
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... std_srvs_generate_messages_py"
 	@echo "... spawn_turtle"
-	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... test"
+	@echo "... geometry_msgs_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... pubvel_toggle"
@@ -1116,27 +1238,31 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... turtlesim_generate_messages_nodejs"
 	@echo "... count"
-	@echo "... install/strip"
 	@echo "... turtlesim_generate_messages_py"
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... reverse_cmd_vel"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_eus"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... hello"
+	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... once"
-	@echo "... edit_cache"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... throttle"
 	@echo "... set_bg_color"
 	@echo "... pubvel_with_max"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... test"
-	@echo "... rebuild_cache"
 	@echo "... src/count.o"
 	@echo "... src/count.i"
 	@echo "... src/count.s"
 	@echo "... src/hello.o"
 	@echo "... src/hello.i"
 	@echo "... src/hello.s"
+	@echo "... src/image_converter.o"
+	@echo "... src/image_converter.i"
+	@echo "... src/image_converter.s"
 	@echo "... src/once.o"
 	@echo "... src/once.i"
 	@echo "... src/once.s"

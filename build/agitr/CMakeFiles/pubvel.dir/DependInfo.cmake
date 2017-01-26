@@ -19,6 +19,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/mrinaal/git/ROS_practice/src/agitr/include"
   "/opt/ros/kinetic/include"
+  "/opt/ros/kinetic/include/opencv-3.1.0-dev/opencv"
+  "/opt/ros/kinetic/include/opencv-3.1.0-dev"
   )
 
 # Targets to which this target links.
