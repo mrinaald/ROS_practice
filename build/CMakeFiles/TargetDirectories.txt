@@ -23,6 +23,7 @@
 /home/mrinaal/git/ROS_practice/build/agitr/CMakeFiles/edit_cache.dir
 /home/mrinaal/git/ROS_practice/build/agitr/CMakeFiles/install/local.dir
 /home/mrinaal/git/ROS_practice/build/agitr/CMakeFiles/install/strip.dir
+/home/mrinaal/git/ROS_practice/build/agitr/CMakeFiles/hist.dir
 /home/mrinaal/git/ROS_practice/build/agitr/CMakeFiles/image_converter.dir
 /home/mrinaal/git/ROS_practice/build/agitr/CMakeFiles/turtlesim_generate_messages_eus.dir
 /home/mrinaal/git/ROS_practice/build/agitr/CMakeFiles/std_srvs_generate_messages_eus.dir

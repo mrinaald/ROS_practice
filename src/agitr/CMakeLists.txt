@@ -137,6 +137,7 @@ add_executable(pubvel_with_max src/pubvel_with_max.cpp)
 add_executable(spawn_turtle src/spawn_turtle.cpp)
 add_executable(pubvel_toggle src/pubvel_toggle.cpp)
 add_executable(image_converter src/image_converter.cpp)
+add_executable(hist src/hist.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
@@ -158,6 +159,7 @@ target_link_libraries(pubvel_with_max ${catkin_LIBRARIES})
 target_link_libraries(spawn_turtle ${catkin_LIBRARIES})
 target_link_libraries(pubvel_toggle ${catkin_LIBRARIES})
 target_link_libraries(image_converter ${catkin_LIBRARIES})
+target_link_libraries(hist ${catkin_LIBRARIES})
 
 #############
 ## Install ##

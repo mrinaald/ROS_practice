@@ -184,6 +184,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/doxygen.dir/DependInfo.cmake"
   "gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
   "gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
+  "agitr/CMakeFiles/hist.dir/DependInfo.cmake"
   "agitr/CMakeFiles/image_converter.dir/DependInfo.cmake"
   "agitr/CMakeFiles/turtlesim_generate_messages_eus.dir/DependInfo.cmake"
   "agitr/CMakeFiles/std_srvs_generate_messages_eus.dir/DependInfo.cmake"

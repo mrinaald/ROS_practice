@@ -166,6 +166,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+agitr/CMakeFiles/hist.dir/rule:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/hist.dir/rule
+.PHONY : agitr/CMakeFiles/hist.dir/rule
+
+# Convenience name for target.
+hist: agitr/CMakeFiles/hist.dir/rule
+
+.PHONY : hist
+
+# fast build rule for target.
+hist/fast:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/hist.dir/build.make agitr/CMakeFiles/hist.dir/build
+.PHONY : hist/fast
+
+# Convenience name for target.
 agitr/CMakeFiles/image_converter.dir/rule:
 	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/image_converter.dir/rule
 .PHONY : agitr/CMakeFiles/image_converter.dir/rule
@@ -924,6 +939,33 @@ src/hello.cpp.s:
 	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/hello.dir/build.make agitr/CMakeFiles/hello.dir/src/hello.cpp.s
 .PHONY : src/hello.cpp.s
 
+src/hist.o: src/hist.cpp.o
+
+.PHONY : src/hist.o
+
+# target to build an object file
+src/hist.cpp.o:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/hist.dir/build.make agitr/CMakeFiles/hist.dir/src/hist.cpp.o
+.PHONY : src/hist.cpp.o
+
+src/hist.i: src/hist.cpp.i
+
+.PHONY : src/hist.i
+
+# target to preprocess a source file
+src/hist.cpp.i:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/hist.dir/build.make agitr/CMakeFiles/hist.dir/src/hist.cpp.i
+.PHONY : src/hist.cpp.i
+
+src/hist.s: src/hist.cpp.s
+
+.PHONY : src/hist.s
+
+# target to generate assembly for a file
+src/hist.cpp.s:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/hist.dir/build.make agitr/CMakeFiles/hist.dir/src/hist.cpp.s
+.PHONY : src/hist.cpp.s
+
 src/image_converter.o: src/image_converter.cpp.o
 
 .PHONY : src/image_converter.o
@@ -1204,6 +1246,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... install/local"
 	@echo "... install/strip"
+	@echo "... hist"
 	@echo "... image_converter"
 	@echo "... turtlesim_generate_messages_eus"
 	@echo "... std_srvs_generate_messages_eus"
@@ -1260,6 +1303,9 @@ help:
 	@echo "... src/hello.o"
 	@echo "... src/hello.i"
 	@echo "... src/hello.s"
+	@echo "... src/hist.o"
+	@echo "... src/hist.i"
+	@echo "... src/hist.s"
 	@echo "... src/image_converter.o"
 	@echo "... src/image_converter.i"
 	@echo "... src/image_converter.s"

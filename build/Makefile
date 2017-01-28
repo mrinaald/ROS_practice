@@ -257,6 +257,19 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
+# Target rules for targets named hist
+
+# Build rule for target.
+hist: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hist
+.PHONY : hist
+
+# fast build rule for target.
+hist/fast:
+	$(MAKE) -f agitr/CMakeFiles/hist.dir/build.make agitr/CMakeFiles/hist.dir/build
+.PHONY : hist/fast
+
+#=============================================================================
 # Target rules for targets named image_converter
 
 # Build rule for target.
@@ -887,6 +900,7 @@ help:
 	@echo "... test"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... hist"
 	@echo "... image_converter"
 	@echo "... turtlesim_generate_messages_eus"
 	@echo "... std_srvs_generate_messages_eus"
