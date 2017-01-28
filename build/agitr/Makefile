@@ -166,6 +166,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+agitr/CMakeFiles/hist_noclass.dir/rule:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/hist_noclass.dir/rule
+.PHONY : agitr/CMakeFiles/hist_noclass.dir/rule
+
+# Convenience name for target.
+hist_noclass: agitr/CMakeFiles/hist_noclass.dir/rule
+
+.PHONY : hist_noclass
+
+# fast build rule for target.
+hist_noclass/fast:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/hist_noclass.dir/build.make agitr/CMakeFiles/hist_noclass.dir/build
+.PHONY : hist_noclass/fast
+
+# Convenience name for target.
 agitr/CMakeFiles/hist.dir/rule:
 	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/hist.dir/rule
 .PHONY : agitr/CMakeFiles/hist.dir/rule
@@ -966,6 +981,33 @@ src/hist.cpp.s:
 	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/hist.dir/build.make agitr/CMakeFiles/hist.dir/src/hist.cpp.s
 .PHONY : src/hist.cpp.s
 
+src/hist_noclass.o: src/hist_noclass.cpp.o
+
+.PHONY : src/hist_noclass.o
+
+# target to build an object file
+src/hist_noclass.cpp.o:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/hist_noclass.dir/build.make agitr/CMakeFiles/hist_noclass.dir/src/hist_noclass.cpp.o
+.PHONY : src/hist_noclass.cpp.o
+
+src/hist_noclass.i: src/hist_noclass.cpp.i
+
+.PHONY : src/hist_noclass.i
+
+# target to preprocess a source file
+src/hist_noclass.cpp.i:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/hist_noclass.dir/build.make agitr/CMakeFiles/hist_noclass.dir/src/hist_noclass.cpp.i
+.PHONY : src/hist_noclass.cpp.i
+
+src/hist_noclass.s: src/hist_noclass.cpp.s
+
+.PHONY : src/hist_noclass.s
+
+# target to generate assembly for a file
+src/hist_noclass.cpp.s:
+	cd /home/mrinaal/git/ROS_practice/build && $(MAKE) -f agitr/CMakeFiles/hist_noclass.dir/build.make agitr/CMakeFiles/hist_noclass.dir/src/hist_noclass.cpp.s
+.PHONY : src/hist_noclass.cpp.s
+
 src/image_converter.o: src/image_converter.cpp.o
 
 .PHONY : src/image_converter.o
@@ -1246,6 +1288,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... install/local"
 	@echo "... install/strip"
+	@echo "... hist_noclass"
 	@echo "... hist"
 	@echo "... image_converter"
 	@echo "... turtlesim_generate_messages_eus"
@@ -1306,6 +1349,9 @@ help:
 	@echo "... src/hist.o"
 	@echo "... src/hist.i"
 	@echo "... src/hist.s"
+	@echo "... src/hist_noclass.o"
+	@echo "... src/hist_noclass.i"
+	@echo "... src/hist_noclass.s"
 	@echo "... src/image_converter.o"
 	@echo "... src/image_converter.i"
 	@echo "... src/image_converter.s"

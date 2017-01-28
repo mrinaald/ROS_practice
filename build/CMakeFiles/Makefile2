@@ -306,6 +306,7 @@ clean: gtest/CMakeFiles/gtest_main.dir/clean
 # Directory level rules for directory agitr
 
 # Convenience name for "all" pass in the directory.
+agitr/all: agitr/CMakeFiles/hist_noclass.dir/all
 agitr/all: agitr/CMakeFiles/hist.dir/all
 agitr/all: agitr/CMakeFiles/image_converter.dir/all
 agitr/all: agitr/CMakeFiles/pubvel.dir/all
@@ -323,6 +324,7 @@ agitr/all: agitr/CMakeFiles/pubvel_with_max.dir/all
 .PHONY : agitr/all
 
 # Convenience name for "clean" pass in the directory.
+agitr/clean: agitr/CMakeFiles/hist_noclass.dir/clean
 agitr/clean: agitr/CMakeFiles/hist.dir/clean
 agitr/clean: agitr/CMakeFiles/image_converter.dir/clean
 agitr/clean: agitr/CMakeFiles/turtlesim_generate_messages_eus.dir/clean
@@ -380,6 +382,43 @@ agitr/preinstall:
 .PHONY : agitr/preinstall
 
 #=============================================================================
+# Target rules for target agitr/CMakeFiles/hist_noclass.dir
+
+# All Build rule for target.
+agitr/CMakeFiles/hist_noclass.dir/all:
+	$(MAKE) -f agitr/CMakeFiles/hist_noclass.dir/build.make agitr/CMakeFiles/hist_noclass.dir/depend
+	$(MAKE) -f agitr/CMakeFiles/hist_noclass.dir/build.make agitr/CMakeFiles/hist_noclass.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=11,12 "Built target hist_noclass"
+.PHONY : agitr/CMakeFiles/hist_noclass.dir/all
+
+# Include target in all.
+all: agitr/CMakeFiles/hist_noclass.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+agitr/CMakeFiles/hist_noclass.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrinaal/git/ROS_practice/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/hist_noclass.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrinaal/git/ROS_practice/build/CMakeFiles 0
+.PHONY : agitr/CMakeFiles/hist_noclass.dir/rule
+
+# Convenience name for target.
+hist_noclass: agitr/CMakeFiles/hist_noclass.dir/rule
+
+.PHONY : hist_noclass
+
+# clean rule for target.
+agitr/CMakeFiles/hist_noclass.dir/clean:
+	$(MAKE) -f agitr/CMakeFiles/hist_noclass.dir/build.make agitr/CMakeFiles/hist_noclass.dir/clean
+.PHONY : agitr/CMakeFiles/hist_noclass.dir/clean
+
+# clean rule for target.
+clean: agitr/CMakeFiles/hist_noclass.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target agitr/CMakeFiles/hist.dir
 
 # All Build rule for target.
@@ -423,7 +462,7 @@ clean: agitr/CMakeFiles/hist.dir/clean
 agitr/CMakeFiles/image_converter.dir/all:
 	$(MAKE) -f agitr/CMakeFiles/image_converter.dir/build.make agitr/CMakeFiles/image_converter.dir/depend
 	$(MAKE) -f agitr/CMakeFiles/image_converter.dir/build.make agitr/CMakeFiles/image_converter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=11,12 "Built target image_converter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=13,14 "Built target image_converter"
 .PHONY : agitr/CMakeFiles/image_converter.dir/all
 
 # Include target in all.
@@ -588,7 +627,7 @@ clean: agitr/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
 agitr/CMakeFiles/pubvel.dir/all:
 	$(MAKE) -f agitr/CMakeFiles/pubvel.dir/build.make agitr/CMakeFiles/pubvel.dir/depend
 	$(MAKE) -f agitr/CMakeFiles/pubvel.dir/build.make agitr/CMakeFiles/pubvel.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=15,16 "Built target pubvel"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=17,18 "Built target pubvel"
 .PHONY : agitr/CMakeFiles/pubvel.dir/all
 
 # Include target in all.
@@ -945,7 +984,7 @@ clean: agitr/CMakeFiles/std_srvs_generate_messages_py.dir/clean
 agitr/CMakeFiles/spawn_turtle.dir/all:
 	$(MAKE) -f agitr/CMakeFiles/spawn_turtle.dir/build.make agitr/CMakeFiles/spawn_turtle.dir/depend
 	$(MAKE) -f agitr/CMakeFiles/spawn_turtle.dir/build.make agitr/CMakeFiles/spawn_turtle.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=25,26 "Built target spawn_turtle"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=27,28 "Built target spawn_turtle"
 .PHONY : agitr/CMakeFiles/spawn_turtle.dir/all
 
 # Include target in all.
@@ -1110,7 +1149,7 @@ clean: agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 agitr/CMakeFiles/pubvel_toggle.dir/all:
 	$(MAKE) -f agitr/CMakeFiles/pubvel_toggle.dir/build.make agitr/CMakeFiles/pubvel_toggle.dir/depend
 	$(MAKE) -f agitr/CMakeFiles/pubvel_toggle.dir/build.make agitr/CMakeFiles/pubvel_toggle.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=17,18 "Built target pubvel_toggle"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=19,20 "Built target pubvel_toggle"
 .PHONY : agitr/CMakeFiles/pubvel_toggle.dir/all
 
 # Include target in all.
@@ -1179,7 +1218,7 @@ clean: agitr/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
 agitr/CMakeFiles/subpose.dir/all:
 	$(MAKE) -f agitr/CMakeFiles/subpose.dir/build.make agitr/CMakeFiles/subpose.dir/depend
 	$(MAKE) -f agitr/CMakeFiles/subpose.dir/build.make agitr/CMakeFiles/subpose.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=27,28 "Built target subpose"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=29,30 "Built target subpose"
 .PHONY : agitr/CMakeFiles/subpose.dir/all
 
 # Include target in all.
@@ -1541,7 +1580,7 @@ clean: agitr/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
 agitr/CMakeFiles/reverse_cmd_vel.dir/all:
 	$(MAKE) -f agitr/CMakeFiles/reverse_cmd_vel.dir/build.make agitr/CMakeFiles/reverse_cmd_vel.dir/depend
 	$(MAKE) -f agitr/CMakeFiles/reverse_cmd_vel.dir/build.make agitr/CMakeFiles/reverse_cmd_vel.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=21,22 "Built target reverse_cmd_vel"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=23,24 "Built target reverse_cmd_vel"
 .PHONY : agitr/CMakeFiles/reverse_cmd_vel.dir/all
 
 # Include target in all.
@@ -1807,7 +1846,7 @@ clean: agitr/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 agitr/CMakeFiles/once.dir/all:
 	$(MAKE) -f agitr/CMakeFiles/once.dir/build.make agitr/CMakeFiles/once.dir/depend
 	$(MAKE) -f agitr/CMakeFiles/once.dir/build.make agitr/CMakeFiles/once.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=13,14 "Built target once"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=15,16 "Built target once"
 .PHONY : agitr/CMakeFiles/once.dir/all
 
 # Include target in all.
@@ -1876,7 +1915,7 @@ clean: agitr/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 agitr/CMakeFiles/throttle.dir/all:
 	$(MAKE) -f agitr/CMakeFiles/throttle.dir/build.make agitr/CMakeFiles/throttle.dir/depend
 	$(MAKE) -f agitr/CMakeFiles/throttle.dir/build.make agitr/CMakeFiles/throttle.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=29,30 "Built target throttle"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=31,32 "Built target throttle"
 .PHONY : agitr/CMakeFiles/throttle.dir/all
 
 # Include target in all.
@@ -1913,7 +1952,7 @@ clean: agitr/CMakeFiles/throttle.dir/clean
 agitr/CMakeFiles/set_bg_color.dir/all:
 	$(MAKE) -f agitr/CMakeFiles/set_bg_color.dir/build.make agitr/CMakeFiles/set_bg_color.dir/depend
 	$(MAKE) -f agitr/CMakeFiles/set_bg_color.dir/build.make agitr/CMakeFiles/set_bg_color.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=23,24 "Built target set_bg_color"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=25,26 "Built target set_bg_color"
 .PHONY : agitr/CMakeFiles/set_bg_color.dir/all
 
 # Include target in all.
@@ -1950,7 +1989,7 @@ clean: agitr/CMakeFiles/set_bg_color.dir/clean
 agitr/CMakeFiles/pubvel_with_max.dir/all:
 	$(MAKE) -f agitr/CMakeFiles/pubvel_with_max.dir/build.make agitr/CMakeFiles/pubvel_with_max.dir/depend
 	$(MAKE) -f agitr/CMakeFiles/pubvel_with_max.dir/build.make agitr/CMakeFiles/pubvel_with_max.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=19,20 "Built target pubvel_with_max"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mrinaal/git/ROS_practice/build/CMakeFiles --progress-num=21,22 "Built target pubvel_with_max"
 .PHONY : agitr/CMakeFiles/pubvel_with_max.dir/all
 
 # Include target in all.

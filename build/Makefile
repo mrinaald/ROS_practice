@@ -257,6 +257,19 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
+# Target rules for targets named hist_noclass
+
+# Build rule for target.
+hist_noclass: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hist_noclass
+.PHONY : hist_noclass
+
+# fast build rule for target.
+hist_noclass/fast:
+	$(MAKE) -f agitr/CMakeFiles/hist_noclass.dir/build.make agitr/CMakeFiles/hist_noclass.dir/build
+.PHONY : hist_noclass/fast
+
+#=============================================================================
 # Target rules for targets named hist
 
 # Build rule for target.
@@ -900,6 +913,7 @@ help:
 	@echo "... test"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... hist_noclass"
 	@echo "... hist"
 	@echo "... image_converter"
 	@echo "... turtlesim_generate_messages_eus"
