@@ -1,4 +1,4 @@
-// This program toggles between rotatation and translation
+// This program toggles between rotation and translation
 // commands, based on calls to a service.
 #include <ros/ros.h>
 #include <std_srvs/Empty.h>
